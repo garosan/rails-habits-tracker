@@ -4,7 +4,7 @@
 /* universal */
 
 body {
-  padding-top: 60px;
+  padding-top: 40px;
 }
 
 section {
@@ -80,4 +80,13 @@ button a {
 button a:hover {
   color: white;
   text-decoration: none;
+}
+
+// Jumbotron Styles
+
+.jumbotron {
+  height: 360px;
+  background: url(asset_path("bg-img.jpg"));
+  background-size: cover;
+  background-position: 100% 20%;
 }
