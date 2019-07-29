@@ -1,0 +1,13 @@
+<% if user_signed_in? %>
+  <div class="text-center">
+    <h1><%= link_to("Start tracking habits!", habits_path) %></h1>
+  </div>
+<% else %>
+  <div class="center jumbotron">
+    <h1>Welcome To Your Habits Tracker</h1>
+
+    <h2>Track your activities, create positive habits!</h2>
+    <%= link_to "Sign up now!", 'users/sign_up', class: "btn btn-lg btn-primary" %>
+    
+  </div>
+<% end %>

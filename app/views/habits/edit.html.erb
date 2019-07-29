@@ -1,0 +1,17 @@
+<div class="container">
+  <%= form_for(@habit) do |form| %>
+    <p><%= form.label("title") %></p>
+    <p><%= form.text_field("title") %></p>
+    <p><%= form.label("description") %></p>
+    <p><%= form.text_area("description") %></p>
+    <p><%= form.label("category") %></p>
+    <p><%= form.text_field("category") %></p>
+    <p><%= form.label("date") %></p>
+    <p><%= form.date_field("date") %></p>
+    <p><%= form.submit %></p>
+  <% end %>
+  <br>
+  <p><%= link_to("Back to this habit", habit_path(@habit)) %></p>
+  <p><%= link_to("Back to all habits", habits_path) %></p>
+</div>
+

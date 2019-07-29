@@ -1,0 +1,10 @@
+<div class="container">
+  <h2>Title: <%= @habit.title %></h2> 
+  <p>Description: <%= @habit.description %></p>
+  <p>Category: <%= @habit.category %></p>
+  <p>Date: <%= @habit.date %></p>
+
+  <p><%= link_to("Edit this habit", edit_habit_path(@habit)) %></p>
+
+  <p><%= link_to("Back to my habits", habits_path) %></p>
+</div>
