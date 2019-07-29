@@ -1,6 +1,6 @@
 class HabitsController < ApplicationController
   def index
-    @habits = Habit.all
+    @habits = Habit.where(user_id:current_user.id)
   end
 
   def show
@@ -19,7 +19,7 @@ class HabitsController < ApplicationController
   end
 
   def create    
-    habit_params = params["habit"].permit("title", "description", "category", "date")
+    habit_params = params["habit"].permit("title", "description", "category", "date").merge(user_id: current_user.id)
     habit = Habit.create(habit_params)
     redirect_to(habit_path(habit))
   end
